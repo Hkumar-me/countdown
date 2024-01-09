@@ -1,0 +1,24 @@
+
+
+{
+    "manifest_version": 3,
+    "name": "Countdown Detector Extension",
+    "version": "1.0",
+    "description": "Detects countdown timers on webpages.",
+    "permissions": [
+        "activeTab",
+        "notifications"
+    ],
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["content2.js"]
+        }
+    ]
+}
